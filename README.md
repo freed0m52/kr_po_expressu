@@ -32,7 +32,7 @@ npm run dev
 ---
 
 ### Вывод ожирения
-![alt text](ojir.png>)
+![alt text](ojir.png)
 
 ---
 
@@ -43,8 +43,8 @@ npm run dev
 
 ## Технологии
 
-- React
-- JSX
+- Express Js
+- html
 - CSS
 - JavaScript
 
