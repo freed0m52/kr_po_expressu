@@ -2,13 +2,10 @@ const express = require('express');
 const router = express.Router();
 const { calculateBMI, getBMICategories } = require('../controllers/bmiController');
 
-// GET для получения категорий ИМТ
 router.get('/categories', getBMICategories);
 
-// POST для расчёта ИМТ
 router.post('/calculate', calculateBMI);
 
-// GET с query параметрами для быстрого расчёта
 router.get('/quick', (req, res) => {
   const { weight, height } = req.query;
   if (!weight || !height) {

@@ -2,7 +2,6 @@ const calculateBMI = (req, res) => {
   try {
     const { weight, height } = req.body;
 
-    // Валидация
     if (!weight || !height) {
       return res.status(400).json({ error: 'Введите вес и рост' });
     }
@@ -10,12 +9,10 @@ const calculateBMI = (req, res) => {
       return res.status(400).json({ error: 'Вес и рост должны быть положительными числами' });
     }
 
-    // Расчёт ИМТ: вес (кг) / (рост (м) * рост (м))
     const heightInMeters = height / 100;
     const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);
     const bmiValue = parseFloat(bmi);
 
-    // Определение категории
     let category = '';
     let color = '';
     
@@ -56,7 +53,6 @@ const getBMICategories = (req, res) => {
   res.json(categories);
 };
 
-// Вспомогательная функция для рекомендаций
 function getRecommendations(category) {
   const recommendations = {
     'Недостаточный вес': 'Рекомендуется увеличить калорийность питания, включить белковые продукты.',
