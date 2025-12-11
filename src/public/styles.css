@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.calculator-card, .info-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid #eaeaea;
+  transition: transform 0.3s;
+}
+
+.calculator-card:hover, .info-card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.calculate-btn {
+  width: 100%;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.calculate-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border-left: 5px solid #3498db;
+}
+
+.hidden {
+  display: none;
+}
+
+.bmi-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.category {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#recommendation {
+  background: #f1f8ff;
+  padding: 15px;
+  border-radius: 8px;
+  color: #2c3e50;
+}
+
+.category-item {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.api-info {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+code {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+footer {
+  text-align: center;
+  color: #7f8c8d;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.timestamp {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Цвета для категорий */
+.blue { background-color: #d6eaf8; color: #1a5276; }
+.green { background-color: #d5f4e6; color: #186a3b; }
+.orange { background-color: #fdebd0; color: #9c640c; }
+.red { background-color: #fadbd8; color: #78281f; }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор ИМТ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-weight-scale"></i> Калькулятор ИМТ</h1>
+      <p class="subtitle">Индекс массы тела — простой показатель соответствия роста и веса</p>
+    </header>
+
+    <main>
+      <div class="calculator-card">
+        <h2><i class="fas fa-calculator"></i> Рассчитать ИМТ</h2>
+        
+        <div class="input-group">
+          <label for="weight"><i class="fas fa-weight-hanging"></i> Вес (кг)</label>
+          <input type="number" id="weight" placeholder="Например: 70" min="1" max="300">
+        </div>
+        
+        <div class="input-group">
+          <label for="height"><i class="fas fa-ruler-vertical"></i> Рост (см)</label>
+          <input type="number" id="height" placeholder="Например: 175" min="50" max="250">
+        </div>
+        
+        <button id="calculateBtn" class="calculate-btn">
+          <i class="fas fa-calculator"></i> Рассчитать
+        </button>
+        
+        <div id="result" class="result hidden">
+          <h3><i class="fas fa-chart-line"></i> Результат</h3>
+          <div class="bmi-value" id="bmiValue">--</div>
+          <div class="category" id="bmiCategory">--</div>
+          <p id="recommendation">--</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2><i class="fas fa-info-circle"></i> Категории ИМТ</h2>
+        <div id="categoriesList">
+          <!-- Заполнится через JavaScript -->
+        </div>
+        
+        <div class="api-info">
+          <h3><i class="fas fa-code"></i> API Endpoints</h3>
+          <ul>
+            <li><code>POST /api/bmi/calculate</code> — расчёт ИМТ</li>
+            <li><code>GET /api/bmi/categories</code> — список категорий</li>
+            <li><code>GET /api/bmi/quick?weight=70&height=175</code> — быстрый расчёт</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Express.js • Контрольная работа №5 • Вариант 22</p>
+      <p class="timestamp" id="timestamp"></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
