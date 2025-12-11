@@ -12,27 +12,27 @@ npm run dev
 
 ---
 ###  Интерфейс калькулятора индекса массы тела
-![alt text](defolt.png)
+![alt text](defolt1.png)
 
 ---
 
 ### Вывод недостаточного веса
-![alt text](nedostat.png)
+![alt text](nedostat1.png)
 
 ---
 
 ### Вывод нормального веса 
-![alt text](norm.png)
+![alt text](norm1.png)
 
 ---
 
 ### Вывод избыточного веса
-![alt text](izb.png)
+![alt text](izb1.png)
 
 ---
 
 ### Вывод ожирения
-![alt text](ojir.png)
+![alt text](ojir1.png)
 
 ---
 
